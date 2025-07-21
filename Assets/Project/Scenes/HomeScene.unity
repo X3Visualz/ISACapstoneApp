@@ -3290,18 +3290,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3969956954057829319, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969956954057829319, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969956954057829319, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4766083106850817401, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3397,12 +3385,6 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5698433045305860731, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
-      propertyPath: m_text
-      value: 'Student
-
-'
       objectReference: {fileID: 0}
     - target: {fileID: 5698433045305860731, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_isRightToLeft
