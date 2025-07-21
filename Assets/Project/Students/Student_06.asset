@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   studentID: Student_06
   studentName: 6
-  studentPortrait: {fileID: 2800000, guid: 3925d37c187aa430e8e17e24d3a3b9d6, type: 3}
+  studentPortrait: {fileID: 2800000, guid: 1398161971a018c4288b79e389e3fce8, type: 3}
   interviewVideo: {fileID: 32900000, guid: 5dab47a958a484343bef96db95a211ae, type: 3}
   projectCompilationVideo: {fileID: 32900000, guid: 21ff6e74ef0b46f4585677a486d0e6f1, type: 3}
