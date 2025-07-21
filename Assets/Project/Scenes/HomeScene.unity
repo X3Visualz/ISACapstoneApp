@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_03
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: f516f0a0923844d4b91029ef2eae59ae, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 651bc0f4c358843d3a9063e40167270e, type: 3}
     - target: {fileID: 4766083106850817401, guid: f516f0a0923844d4b91029ef2eae59ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -355,6 +359,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: f516f0a0923844d4b91029ef2eae59ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: f516f0a0923844d4b91029ef2eae59ae, type: 3}
+      propertyPath: m_text
+      value: Angelina
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: f516f0a0923844d4b91029ef2eae59ae, type: 3}
       propertyPath: m_Name
@@ -644,6 +652,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_11
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: b5f6d9741799b7d498b928aeeaaeba39, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: f1d6022bc11f249e1a2a2c7d3fbc6766, type: 3}
     - target: {fileID: 4766083106850817401, guid: b5f6d9741799b7d498b928aeeaaeba39, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -723,6 +735,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: b5f6d9741799b7d498b928aeeaaeba39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: b5f6d9741799b7d498b928aeeaaeba39, type: 3}
+      propertyPath: m_text
+      value: Kian
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: b5f6d9741799b7d498b928aeeaaeba39, type: 3}
       propertyPath: m_Name
@@ -858,6 +874,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: 01667fe1bf5da044f86f4a162dac6ec0, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1ce546665d4114f3e8d99eedd2e5744a, type: 3}
     - target: {fileID: 4766083106850817401, guid: 01667fe1bf5da044f86f4a162dac6ec0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -954,6 +974,12 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: 01667fe1bf5da044f86f4a162dac6ec0, type: 3}
+      propertyPath: m_text
+      value: 'Amelia
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: 01667fe1bf5da044f86f4a162dac6ec0, type: 3}
       propertyPath: m_Name
       value: StudentCard 1
@@ -984,6 +1010,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_08
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: 44f3d0860cd1d654bb08051d17080ddb, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2254acffc84d14db69cb777eabebce1c, type: 3}
     - target: {fileID: 4766083106850817401, guid: 44f3d0860cd1d654bb08051d17080ddb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1063,6 +1093,12 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: 44f3d0860cd1d654bb08051d17080ddb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: 44f3d0860cd1d654bb08051d17080ddb, type: 3}
+      propertyPath: m_text
+      value: 'Emmanual
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: 44f3d0860cd1d654bb08051d17080ddb, type: 3}
       propertyPath: m_Name
@@ -1234,8 +1270,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 598706526}
   m_HandleRect: {fileID: 598706525}
   m_Direction: 0
-  m_Value: 0.49999642
-  m_Size: 0.99149996
+  m_Value: 0.5
+  m_Size: 0.9915
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1621,6 +1657,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_12
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: a4c573cf76e8cd24d8f89e83e2e9e0b9, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4a9dd018c3e41465db96e88774465ea9, type: 3}
     - target: {fileID: 4766083106850817401, guid: a4c573cf76e8cd24d8f89e83e2e9e0b9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1700,6 +1740,12 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: a4c573cf76e8cd24d8f89e83e2e9e0b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: a4c573cf76e8cd24d8f89e83e2e9e0b9, type: 3}
+      propertyPath: m_text
+      value: 'Rafael
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: a4c573cf76e8cd24d8f89e83e2e9e0b9, type: 3}
       propertyPath: m_Name
@@ -1831,6 +1877,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_05
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: ded4f0700cf977545be043e0c417c8c6, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 9abb9f260cc8c4a9cbe4f99cd13f5265, type: 3}
     - target: {fileID: 4766083106850817401, guid: ded4f0700cf977545be043e0c417c8c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1910,6 +1960,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: ded4f0700cf977545be043e0c417c8c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: ded4f0700cf977545be043e0c417c8c6, type: 3}
+      propertyPath: m_text
+      value: Ariela
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: ded4f0700cf977545be043e0c417c8c6, type: 3}
       propertyPath: m_Name
@@ -2026,6 +2080,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_10
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: cec0ae7c94e8f6f4d88e6f2a832b9c48, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 98e814d2048244a65a221ca1d62d612e, type: 3}
     - target: {fileID: 4766083106850817401, guid: cec0ae7c94e8f6f4d88e6f2a832b9c48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2105,6 +2163,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: cec0ae7c94e8f6f4d88e6f2a832b9c48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: cec0ae7c94e8f6f4d88e6f2a832b9c48, type: 3}
+      propertyPath: m_text
+      value: Jericho
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: cec0ae7c94e8f6f4d88e6f2a832b9c48, type: 3}
       propertyPath: m_Name
@@ -2333,6 +2395,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: 7470fc251145f2044be350cb60a91e68, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 0be73567b11854da2be8d5321266df84, type: 3}
     - target: {fileID: 4766083106850817401, guid: 7470fc251145f2044be350cb60a91e68, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2429,6 +2495,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: 7470fc251145f2044be350cb60a91e68, type: 3}
+      propertyPath: m_text
+      value: Ashton
+      objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: 7470fc251145f2044be350cb60a91e68, type: 3}
       propertyPath: m_Name
       value: StudentCard 2
@@ -2454,6 +2524,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_07
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: e16609a52538cca44bb6e110a7eeab80, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: f347d10dbea594c97b98f6b117f4e28a, type: 3}
     - target: {fileID: 4766083106850817401, guid: e16609a52538cca44bb6e110a7eeab80, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2533,6 +2607,12 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: e16609a52538cca44bb6e110a7eeab80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: e16609a52538cca44bb6e110a7eeab80, type: 3}
+      propertyPath: m_text
+      value: 'Edrei
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: e16609a52538cca44bb6e110a7eeab80, type: 3}
       propertyPath: m_Name
@@ -2559,6 +2639,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_06
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: 00285e1042fa9034ab775a24f9eff4ae, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 3925d37c187aa430e8e17e24d3a3b9d6, type: 3}
     - target: {fileID: 4766083106850817401, guid: 00285e1042fa9034ab775a24f9eff4ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2638,6 +2722,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: 00285e1042fa9034ab775a24f9eff4ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: 00285e1042fa9034ab775a24f9eff4ae, type: 3}
+      propertyPath: m_text
+      value: Anthony
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: 00285e1042fa9034ab775a24f9eff4ae, type: 3}
       propertyPath: m_Name
@@ -2821,7 +2909,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 478237053}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4799804
+  m_Size: 0.47998047
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2885,6 +2973,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_04
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: aa4b9e66de64c214887612e3a93621bc, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 0d59dda52944f4b44834b12b31f5f55f, type: 3}
     - target: {fileID: 4766083106850817401, guid: aa4b9e66de64c214887612e3a93621bc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2964,6 +3056,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: aa4b9e66de64c214887612e3a93621bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: aa4b9e66de64c214887612e3a93621bc, type: 3}
+      propertyPath: m_text
+      value: Angel
       objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: aa4b9e66de64c214887612e3a93621bc, type: 3}
       propertyPath: m_Name
@@ -3181,6 +3277,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_09
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: f2b7a5cd129ae4d4581674ef2aa45527, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2349e8c68bdfc44e58d47821679882ad, type: 3}
     - target: {fileID: 4766083106850817401, guid: f2b7a5cd129ae4d4581674ef2aa45527, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3261,6 +3361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: f2b7a5cd129ae4d4581674ef2aa45527, type: 3}
+      propertyPath: m_text
+      value: Jamison
+      objectReference: {fileID: 0}
     - target: {fileID: 6148701611587844274, guid: f2b7a5cd129ae4d4581674ef2aa45527, type: 3}
       propertyPath: m_Name
       value: StudentCard 9
@@ -3286,6 +3390,10 @@ PrefabInstance:
       propertyPath: studentID
       value: Student_00
       objectReference: {fileID: 0}
+    - target: {fileID: 3196839343885183938, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: b44beaaa4f1554ba08fb37fac91460cc, type: 3}
     - target: {fileID: 3486900624798670919, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3385,6 +3493,10 @@ PrefabInstance:
     - target: {fileID: 4766083106850817401, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698433045305860731, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
+      propertyPath: m_text
+      value: Alexia
       objectReference: {fileID: 0}
     - target: {fileID: 5698433045305860731, guid: 38a027a2fb5763f459b001522ec73658, type: 3}
       propertyPath: m_isRightToLeft
