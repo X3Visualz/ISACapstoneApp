@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-[CreateAssetMenu(fileName = "New Student", menuName = "Student/Profile")]
+[CreateAssetMenu(fileName = "StudentData", menuName = "ISA/Student Data")]
 public class StudentData : ScriptableObject
 {
     public string studentID;
     public string studentName;
-    public Texture studentPortrait; // Used with RawImage
-    public VideoClip interviewVideo;
-    public VideoClip projectCompilationVideo; // <-- Keep original field name
+    public Texture studentPortrait;
+
+    // Video file names (must match files in StreamingAssets)
+    public string interviewVideoFileName;
+    public string projectCompilationVideoFileName;
 }

@@ -4,19 +4,18 @@ public class ProfileManager : MonoBehaviour
 {
     public static ProfileManager Instance;
 
-    public string SelectedStudentID;
+    public string SelectedStudentID;  //  Keep this exact name
 
     void Awake()
     {
-        // Singleton setup
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep this across scene loads
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Prevent duplicates
+            Destroy(gameObject);
         }
     }
 }

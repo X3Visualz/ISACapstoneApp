@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 66c3608318c58da49ae0b3457edf85d8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - videoPanel: {instanceID: 0}
+  - videoPlayer: {instanceID: 0}
+  - backButton: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

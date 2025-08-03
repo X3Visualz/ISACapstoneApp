@@ -8,11 +8,11 @@ public class StudentCard : MonoBehaviour
     public string studentID;  // Unique ID like "student00", "student01", etc.
 
     [Header("Button Component")]
-    public Button cardButton; // Optional if you want to hook this manually
+    public Button cardButton; // Optional — auto-assigned if null
 
     void Start()
     {
-        // Auto-hook up the button if not assigned
+        // Auto-assign the Button component if it's not set in the Inspector
         if (cardButton == null)
             cardButton = GetComponent<Button>();
 
@@ -22,22 +22,30 @@ public class StudentCard : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("StudentCard is missing a Button component!");
+            Debug.LogWarning($"StudentCard on '{gameObject.name}' is missing a Button component!");
         }
     }
 
     void OnCardClicked()
     {
+        // Check that ProfileManager is available
         if (ProfileManager.Instance == null)
         {
-            Debug.LogError("ProfileManager is missing in scene!");
+            Debug.LogError("ProfileManager.Instance is null! Ensure it's in the starting scene.");
             return;
         }
 
-        // Set the selected ID and load the profile scene
-        ProfileManager.Instance.SelectedStudentID = studentID;
-        Debug.Log("Student card clicked: " + studentID);
+        if (string.IsNullOrEmpty(studentID))
+        {
+            Debug.LogWarning("studentID is empty or null on StudentCard.");
+            return;
+        }
 
-        SceneManager.LoadScene("StudentProfile"); // Make sure scene is in Build Settings
+        // Save selected student ID
+        ProfileManager.Instance.SelectedStudentID = studentID;
+        Debug.Log($"Student card clicked: {studentID}");
+
+        // Load the profile scene — this must be added to Build Settings
+        SceneManager.LoadScene("StudentProfile");
     }
 }

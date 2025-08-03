@@ -1,7 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-[CreateAssetMenu(fileName = "StudentDatabase", menuName = "Student/Database")]
+[CreateAssetMenu(fileName = "StudentDatabase", menuName = "ISA/Student Database")]
 public class StudentDatabase : ScriptableObject
 {
     public List<StudentData> students;
@@ -11,3 +11,4 @@ public class StudentDatabase : ScriptableObject
         return students.Find(student => student.studentID == id);
     }
 }
+

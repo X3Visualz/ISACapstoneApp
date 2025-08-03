@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using System.IO;
 
 public class ProfileLoader : MonoBehaviour
 {
     [Header("UI References")]
-    public TextMeshProUGUI studentName;
+    public TextMeshProUGUI studentNameText;
     public RawImage studentPortrait;
     public Button interviewButton;
     public Button compilationButton;
@@ -21,15 +22,16 @@ public class ProfileLoader : MonoBehaviour
 
     void Start()
     {
-        if (ProfileManager.Instance == null)
+        string studentID = ProfileManager.Instance.SelectedStudentID;
+        Debug.Log($"🔍 ProfileLoader Start() — Student ID: {studentID}");
+
+        if (string.IsNullOrEmpty(studentID))
         {
-            Debug.LogError("ProfileManager.Instance is null. Make sure ProfileManager exists in the Home scene and is set to DontDestroyOnLoad.");
+            Debug.LogWarning("⚠️ No student ID found in ProfileManager.");
             return;
         }
 
-        string selectedID = ProfileManager.Instance.SelectedStudentID;
-        Debug.Log("Loading profile for ID: " + selectedID);
-        LoadProfile(selectedID);
+        LoadProfile(studentID);
 
         if (videoBackButton != null)
             videoBackButton.onClick.AddListener(CloseVideoPanel);
@@ -40,70 +42,114 @@ public class ProfileLoader : MonoBehaviour
 
     public void LoadProfile(string id)
     {
-        Debug.Log("Running LoadProfile with ID: " + id);
-
-        if (studentDatabase == null)
-        {
-            Debug.LogError("StudentDatabase reference is null! Assign it in the inspector.");
-            return;
-        }
+        Debug.Log($"📄 LoadProfile() called with ID: {id}");
 
         StudentData data = studentDatabase.GetStudentByID(id);
 
         if (data == null)
         {
-            Debug.LogWarning("No student found with ID: " + id);
+            Debug.LogWarning($"❌ No student found with ID: {id}");
             return;
         }
 
-        // Debug logs
-        Debug.Log("Student Name Loaded: " + data.studentName);
-        Debug.Log("Student Portrait Texture: " + (data.studentPortrait != null ? data.studentPortrait.name : "NULL"));
+        Debug.Log($"✅ Found student: {data.studentName}");
 
-        // Assign to UI
-        if (studentName != null)
-            studentName.text = data.studentName;
-        else
-            Debug.LogWarning("studentName UI reference is not set.");
+        studentNameText.text = data.studentName;
+        studentPortrait.texture = data.studentPortrait;
 
-        if (studentPortrait != null)
-            studentPortrait.texture = data.studentPortrait;
-        else
-            Debug.LogWarning("studentPortrait UI reference is not set.");
+        SetupButton(interviewButton, data.interviewVideoFileName);
+        SetupButton(compilationButton, data.projectCompilationVideoFileName);
+    }
 
-        // Interview button
-        if (interviewButton != null)
+    void SetupButton(Button button, string videoFileName)
+    {
+        if (button == null)
         {
-            interviewButton.onClick.RemoveAllListeners();
-            interviewButton.onClick.AddListener(() => PlayVideo(data.interviewVideo));
+            Debug.LogWarning("⚠️ Button reference is missing.");
+            return;
         }
 
-        // Compilation button
-        if (compilationButton != null)
+        if (!string.IsNullOrEmpty(videoFileName))
         {
-            compilationButton.onClick.RemoveAllListeners();
-            compilationButton.onClick.AddListener(() => PlayVideo(data.projectCompilationVideo));
+            Debug.Log($"🎬 Setting up button for video: {videoFileName}");
+
+            button.gameObject.SetActive(true);
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() =>
+            {
+                Debug.Log($"▶️ Button clicked — video: {videoFileName}");
+                PlayVideoFromStreamingAssets(videoFileName);
+            });
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Video file name is empty. Disabling button.");
+            button.gameObject.SetActive(false);
         }
     }
 
-    void PlayVideo(VideoClip clip)
+    void PlayVideoFromStreamingAssets(string fileName)
     {
-        if (clip == null)
+        if (string.IsNullOrEmpty(fileName))
         {
-            Debug.LogWarning("VideoClip is null. Cannot play video.");
+            Debug.LogWarning("⚠️ Video file name is null or empty.");
             return;
         }
 
-        if (videoPlayer == null || videoPanel == null)
+        if (videoPlayer == null)
         {
-            Debug.LogWarning("VideoPlayer or VideoPanel reference is missing.");
+            Debug.LogWarning("⚠️ VideoPlayer is not assigned.");
             return;
         }
+
+        if (videoPanel == null)
+        {
+            Debug.LogWarning("⚠️ VideoPanel is not assigned.");
+            return;
+        }
+
+        if (!fileName.EndsWith(".mp4"))
+            fileName += ".mp4";
+
+        string fileCheckPath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string fullPath = fileCheckPath;
+
+#if UNITY_IOS
+        fullPath = "file://" + fullPath;
+#endif
+
+        if (!File.Exists(fileCheckPath))
+        {
+            Debug.LogError($"❌ Video file not found at: {fileCheckPath}");
+            return;
+        }
+
+        Debug.Log($"✅ Found video file: {fileCheckPath}");
+        Debug.Log($"Attempting to play video from: {fullPath}");
 
         videoPlayer.Stop();
-        videoPlayer.clip = clip;
-        videoPlayer.Play();
+        videoPlayer.clip = null;
+        videoPlayer.source = VideoSource.Url;
+        videoPlayer.url = fullPath;
+
+        // 🔍 TEMP: Render directly to camera for visibility
+        videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+        videoPlayer.targetCamera = Camera.main;
+        videoPlayer.targetCameraAlpha = 1f;
+
+        videoPlayer.prepareCompleted -= OnVideoPrepared;
+        videoPlayer.prepareCompleted += OnVideoPrepared;
+
         videoPanel.SetActive(true);
+
+        videoPlayer.Prepare();
+        Debug.Log("🔄 videoPlayer.Prepare() called");
+    }
+
+    void OnVideoPrepared(VideoPlayer vp)
+    {
+        Debug.Log("✅ Video prepared and now playing.");
+        vp.Play();
     }
 
     void CloseVideoPanel()
