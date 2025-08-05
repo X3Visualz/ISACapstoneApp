@@ -16,4 +16,4 @@ MonoBehaviour:
   studentName: 'Anthony Vargas Morales '
   studentPortrait: {fileID: 2800000, guid: 3925d37c187aa430e8e17e24d3a3b9d6, type: 3}
   interviewVideoFileName: Tony
-  projectCompilationVideoFileName: Tony_highlights
+  projectCompilationVideoFileName: Tony_Highlights
