@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Student_01
   m_EditorClassIdentifier: 
   studentID: Student_01
-  studentName: Gale
+  studentName: Amelia Brown
   studentPortrait: {fileID: 2800000, guid: 1ce546665d4114f3e8d99eedd2e5744a, type: 3}
   interviewVideoFileName: 
-  projectCompilationVideoFileName: AmeliaFinalEdit
+  projectCompilationVideoFileName: Amelia_highlights

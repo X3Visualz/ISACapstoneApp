@@ -20,6 +20,9 @@ public class ProfileLoader : MonoBehaviour
     [Header("Data")]
     public StudentDatabase studentDatabase;
 
+    [Header("Video Display")]
+    public RenderTexture videoRenderTexture;  // ✅ NEW: assign in Inspector
+
     void Start()
     {
         string studentID = ProfileManager.Instance.SelectedStudentID;
@@ -132,10 +135,10 @@ public class ProfileLoader : MonoBehaviour
         videoPlayer.source = VideoSource.Url;
         videoPlayer.url = fullPath;
 
-        // 🔍 TEMP: Render directly to camera for visibility
-        videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
-        videoPlayer.targetCamera = Camera.main;
-        videoPlayer.targetCameraAlpha = 1f;
+        // ✅ Use RenderTexture instead of fullscreen
+        videoPlayer.renderMode = VideoRenderMode.RenderTexture;
+        videoPlayer.targetTexture = videoRenderTexture;
+        Debug.Log($"🎯 Assigned RenderTexture: {videoRenderTexture?.name}");
 
         videoPlayer.prepareCompleted -= OnVideoPrepared;
         videoPlayer.prepareCompleted += OnVideoPrepared;
